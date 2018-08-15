@@ -12,13 +12,19 @@
 <body>
   <div class="container">
 
-      <nav class="navbar is-fixed-top">
-        <div class="navbar-brand">
-          <a href="https://www.kbki.ml" class ="navbar-item">
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand navbar-item">
+          <a class ="navbar-item" href="https://www.kbki.ml">
             <h1 class="is-size-4">
-              <strong>KBK</strong>
+              kbk
             </h1>
           </a>
+          <a class="navbar-burger burger" role="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
 
         <div class="navbar-start">
           <a href="https://www.instagram.com/luckuisha/" class="navbar-item">
@@ -38,20 +44,15 @@
           </a>
         </div>
 
-        <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
-        <div class="navbar-end navbar-menu navbar-start">
+        <div class="navbar-start navbar-menu">
+          <a href="#home" class="navbar-item">Home</a>
           <a href="#aboutme" class="navbar-item">About me</a>
           <a href="#projects" class="navbar-item">Projects</a>
           <a href="#resume" class="navbar-item">Resume</a>
         </div>
       </nav>
-    </div>
 
-    <section class="hero has-background has-bg-img is-large is-dark is-bold" style = "background: url(tempme.jpg) no-repeat center/cover ; background-size: 100%">
+    <section class="hero has-background has-bg-img is-large is-dark is-bold" style = "background: url(tempme.jpg) no-repeat center/cover ; background-size: 100%" id="home">
       <div class="hero-body">
         <div class="container">
           <h1 class="title has-text-grey-lighter">
@@ -64,15 +65,29 @@
       </div>
     </section>
 
-
-    <div class ="block">
-      <a id="aboutme"></a>
-      <p>
-        this is where I will put all my projects
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis earum quo, repellat nam delectus. Ipsam nobis, obcaecati illum enim, minus illo molestiae delectus, dolore dolorum eveniet fugit provident alias. Autem eaque, id pariatur sequi laudantium nobis voluptatibus veritatis, sed omnis eos suscipit expedita aliquam molestias ipsum, nisi, fugiat vel illo rem reiciendis ex. Voluptas voluptatibus dignissimos debitis tempora a odio eum mollitia, harum laboriosam, asperiores quibusdam nisi eaque et voluptates! Asperiores dolorum corporis, velit? Illo adipisci magni unde maiores delectus fugit, deserunt molestiae quaerat ea voluptatibus facilis fugiat ullam minus magnam soluta possimus, cum beatae, quam hic consequatur iste officia.
-      </p>
-    </div>
-
+    <section class="hero" id="aboutme">
+      <div class="hero-body">
+        <h1 class="title has-text-centered">
+          about me
+        </h1>
+        <article class="media">
+          <figure class="media-left">
+            <p class="image is-64x64">
+              <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>Kyu Bum (Lucky) Kim</strong>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <section class="section" id="projects">
       <div class="container">
@@ -86,19 +101,24 @@
       </div>
       <p> this is my website that i am currently working one.
           its a work in progress so im sure in the future this will be a fully working website in the future.</p>
-      <hr/>
     </section>
 
-
-
-
-    <div class ="block">
-      <a id="resume"></a>
-      <p>
-        this is where i will put my resume
-      
-      </p>
-    </div>
+    <section class="section" id="resume">
+        <div class="container">
+          <h1 class="title has-text-centered">Resume</h1>
+          <p class="buttons is-centered">
+            <a class="button is-large is-focused is-primary" href"https://www.kbki.ml/Resume.pdf">
+              <span class="icon">
+                <i class="fa fa-file"></i>
+              </span>
+            </a
+          </p>
+          <h2 class="subtitle has-text-centered">
+          click the buttone above for my resume!
+          </h2>
+        </div>
+        <hr/>
+      </section>
 
   </div>
 </body>
