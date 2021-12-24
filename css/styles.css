@@ -1,0 +1,203 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+/*
+font-family: 'Source Code Pro', monospace;
+*/
+
+
+/* initial site setup */
+
+:root {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  --text-primary: #acacac;
+  --text-secondary: #777586;
+  --bg-intro: #0d0c12;
+  --bg-primary: #23212e;
+}
+
+body{
+  background-color: var(--bg-primary); 
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* intro screen */
+
+.intro {
+  font-family: 'Source Code Pro', monospace;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-intro);
+  transition: 1s;
+}
+
+.intro-logo {
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.intro-name-header {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro-description-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+
+.intro-wip-header {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro-name, .intro-description, .intro-wip {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.intro-name.active, .intro-description.active, .intro-wip.active, .intro-logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 1s;
+}
+
+.intro-name.fade, .intro-description.fade, .intro-wip.fade, .intro-logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+
+/* bulk site */
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background:coral;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: crimson;
+}
+
+.home-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+  background-color: var(--bg-primary);
+}
+
+.home-title-name {
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.home-title-logo {
+  width: 25%;
+  padding: 0;
+  height: auto;
+}
+
+.menu {
+  position: fixed;
+  width: 5rem;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  transition: width 200ms ease;
+}
+
+.menu:hover {
+  width: 16rem;
+}
+
+.menu:hover .menu-link-text {
+  display: block;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.menu-link i {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.menu-link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+li, a {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #7b7c7f;
+}
+
+.menu-items {
+  list-style: none;
+}
+
+.menu-items li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu-items li a {
+  transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+  transition-property: color, background-color;
+  transition-duration: 170ms, 170ms;
+  transition-timing-function: ease-in-out, ease-in-out;
+  transition-delay: 0s, 0s;
+  /* transition: all 0.3s ease 0s; */
+}
+
+.menu-items li a:hover {
+  /* color: #008b89 */
+}
+
+a:hover {
+  color: #eaf6f6;
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
