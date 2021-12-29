@@ -1,24 +1,41 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Slab:wght@200&family=Source+Code+Pro:wght@300&display=swap');
+
 /*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Slab', serif;
 font-family: 'Source Code Pro', monospace;
 */
-
 
 /* initial site setup */
 
 :root {
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
-  --text-primary: #acacac;
-  --text-secondary: #777586;
-  --bg-intro: #000000;
-  --bg-primary: #23212e;
+  --text-font-mono: 'Source Code Pro', monospace;
+  --text-font-sans-serif: 'Montserrat', sans-serif;
+  --text-font-serif: 'Roboto Slab', serif;
+
+  --text-primary: #a2a2a4;
+  --text-dark-gray: #676764;
+  --text-blue: #75868e;
+  --text-brown: #c58059;
+  
+  --text-accent-brown: #ee9052;
+  --text-accent-blue: #59C2A4;
+  --text-accent-pink: #ed5e93;
+  --text-green: #d3fbd8;
+
+  --bg-primary: #000000;
+  --bg-gray: #202028;
+  --bg-navy: #202930;
+  --bg-brown: #622C10;
 }
 
 body{
   background-color: var(--bg-primary); 
   color: var(--text-primary);
+  text-decoration: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,14 +44,14 @@ body{
 /* intro screen */
 
 .intro {
-  font-family: 'Source Code Pro', monospace;
+  font-family: var(--text-font-mono);
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--bg-intro);
+  background-color: var(--bg-primary);
   transition: 1s;
 }
 
@@ -49,6 +66,7 @@ body{
 }
 
 .intro-name-header {
+  font-family: var(--text-font-mono);
   position: absolute;
   top: 45%;
   left: 50%;
@@ -56,6 +74,7 @@ body{
 }
 
 .intro-description-header {
+  font-family: var(--text-font-sans-serif);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,6 +82,7 @@ body{
 } 
 
 .intro-wip-header {
+  font-family: var(--text-font-sans-serif);
   position: absolute;
   top: 53%;
   left: 50%;
@@ -88,44 +108,68 @@ body{
   transition: ease-in-out 1s;
 }
 
-/* bulk site */
+/* scollbar */
 
 body::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
-  background:coral;
+  border-radius: 1vw;
+  background: rgba(181, 145, 106, 0.3);
+  box-shadow: inset 0 0 .25rem rgb(0, 0, 0);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: crimson;
+  border-radius: 0.25em;
+  background: rgba(176, 102, 44, 0.5); 
+  box-shadow: inset 0 0 .25rem rgb(0, 0, 0);
+  /* border: .1em solid transparent;
+  background-clip: content-box; */
 }
 
-.home-title {
+body::-webkit-scrollbar-track:hover {
+  background: rgba(181, 145, 106, 0.35);
+} 
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(176, 102, 44, 0.75); 
+}
+
+/* header */
+
+.header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0 2%;
+  padding: 0 1.5%;
   background-color: var(--bg-primary);
 }
 
-.home-title-name {
+.header-link {
+  text-decoration: none;
+}
+
+.header-link:hover {
+  color: white;
+}
+
+.header-title{
+  font-family: var(--text-font-mono);
+}
+
+.header-name {
   font-weight: 400;
   color: var(--text-primary);
 }
 
-.home-title-logo {
-  width: 25%;
-  padding: 0;
-  height: auto;
-}
+/* navbar */
 
 .menu {
   position: fixed;
   width: 5rem;
   height: 100vh;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-gray);
   transition: width 200ms ease;
 }
 
@@ -200,4 +244,13 @@ a:hover {
 main {
   margin-left: 5rem;
   padding: 1rem;
+}
+main {
+  background-color: var(--bg-navy);
+}
+main h1{
+  font-family: var(--text-font-mono);
+}
+main h2 {
+  font-family: var(--text-font-sans-serif);
 }
