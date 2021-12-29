@@ -30,6 +30,9 @@ font-family: 'Source Code Pro', monospace;
   --bg-gray: #202028;
   --bg-navy: #202930;
   --bg-brown: #622C10;
+
+  --scrollbar-track-color: 181, 145, 106;
+  --scrollbar-thumb-color: 176, 102, 44;
 }
 
 body{
@@ -41,6 +44,33 @@ body{
   box-sizing: border-box;
 }
 
+/* scollbar */
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 1vw;
+  background: rgba( var(--scrollbar-track-color), 0.3);
+  box-shadow: inset 0 0 .25rem var(--bg-primary); 
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 0.25em;
+  background: rgba(var(--scrollbar-track-color), 0.5); 
+  box-shadow: inset 0 0 .25rem var(--bg-primary);
+  /* border: .1em solid transparent;
+  background-clip: content-box; */
+}
+
+body::-webkit-scrollbar-track:hover {
+  background: rgba(181, 145, 106, 0.35);
+} 
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(176, 102, 44, 0.75); 
+}
 /* intro screen */
 
 .intro {
@@ -106,34 +136,6 @@ body{
   bottom: 150px;
   opacity: 0;
   transition: ease-in-out 1s;
-}
-
-/* scollbar */
-
-body::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-  border-radius: 1vw;
-  background: rgba(181, 145, 106, 0.3);
-  box-shadow: inset 0 0 .25rem rgb(0, 0, 0);
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 0.25em;
-  background: rgba(176, 102, 44, 0.5); 
-  box-shadow: inset 0 0 .25rem rgb(0, 0, 0);
-  /* border: .1em solid transparent;
-  background-clip: content-box; */
-}
-
-body::-webkit-scrollbar-track:hover {
-  background: rgba(181, 145, 106, 0.35);
-} 
-
-body::-webkit-scrollbar-thumb:hover {
-  background: rgba(176, 102, 44, 0.75); 
 }
 
 /* header */
