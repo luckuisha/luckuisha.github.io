@@ -7,6 +7,7 @@ font-family: 'Roboto Slab', serif;
 font-family: 'Source Code Pro', monospace;
 */
 
+/* https://www.youtube.com/watch?v=M-pil5oHw0w */
 /* initial site setup */
 
 :root {
@@ -42,6 +43,10 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* scollbar */
@@ -141,12 +146,12 @@ body::-webkit-scrollbar-thumb:hover {
 /* header */
 
 .header {
-  display: flex;
   position: fixed;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 1.5%;
+  width: 100%;
+  padding: 15px 25px;
   background-color: var(--bg-primary);
+  text-align: center;
+  display: flex;
 }
 
 .header-link {
@@ -161,15 +166,11 @@ body::-webkit-scrollbar-thumb:hover {
   font-family: var(--text-font-mono);
 }
 
-.header-name {
-  font-weight: 400;
-  color: var(--text-primary);
-}
-
 /* navbar */
 
 .menu {
   position: fixed;
+  margin-top: 52px;
   width: 5rem;
   height: 100vh;
   background-color: var(--bg-gray);
@@ -245,8 +246,8 @@ a:hover {
 }
 
 main {
-  margin-left: 5rem;
-  padding: 1rem;
+  padding: 16rem;
+  height: 100vh;
 }
 main {
   background-color: var(--bg-navy);
@@ -256,4 +257,25 @@ main h1{
 }
 main h2 {
   font-family: var(--text-font-sans-serif);
+}
+
+/* footer */
+
+.footer {
+  height: 40px;
+  background-color: var(--bg-brown);
+}
+
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.footer-item {
+  font-family: var(--text-font-serif);
+}
+
+.footer-link {
+  text-decoration: none;
 }
